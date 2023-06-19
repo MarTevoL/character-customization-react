@@ -18,33 +18,33 @@ function App() {
   const [mouth, setMouth] = useState(4);
   const [eyebrows, setEyebrows] = useState(5);
   const [glasses, setGlasses] = useState(6);
-  const [shirt, setShirt] = useState(7);
-  const [coat, setCoat] = useState(8);
-  const [accessories, setAccessories] = useState(8);
-  const [itemArray, setItemArray] = useState([
-    body,
-    eyes,
-    hair,
-    mouth,
-    eyebrows,
-    glasses,
-    shirt,
-    coat,
-    accessories,
-  ]);
+  const [shirt, setShirt] = useState(1);
+  const [coat, setCoat] = useState(1);
+  const [accessories, setAccessories] = useState(1);
+  const [itemObject, setItemObject] = useState({
+    _body: body,
+    _eyes: eyes,
+    _hair: hair,
+    _mouth: mouth,
+    _eyebrows: eyebrows,
+    _glasses: glasses,
+    _shirt: shirt,
+    _coat: coat,
+    _accessories: accessories,
+  });
 
   useEffect(() => {
-    setItemArray([
-      body,
-      eyes,
-      hair,
-      mouth,
-      eyebrows,
-      glasses,
-      shirt,
-      coat,
-      accessories,
-    ]);
+    setItemObject({
+      _body: body,
+      _eyes: eyes,
+      _hair: hair,
+      _mouth: mouth,
+      _eyebrows: eyebrows,
+      _glasses: glasses,
+      _shirt: shirt,
+      _coat: coat,
+      _accessories: accessories,
+    });
   }, [body, eyes, hair, mouth, eyebrows, glasses, shirt, coat, accessories]);
 
   return (
@@ -57,7 +57,7 @@ function App() {
           <div className="avatar-wrapper">
             <div className="avatar">
               <img
-                src={"images/body/1.png"}
+                src={`images/body/${itemObject._body}.png`}
                 alt=""
                 width="260"
                 style={{
@@ -68,7 +68,7 @@ function App() {
                 }}
               ></img>
               <img
-                src={"/images/eyes/16.png"}
+                src={`/images/eyes/${itemObject._eyes}.png`}
                 alt=""
                 width="260"
                 style={{
@@ -79,7 +79,7 @@ function App() {
                 }}
               ></img>
               <img
-                src={"/images/clothes/layer_1/4.png"}
+                src={`/images/clothes/layer_1/${itemObject._shirt}.png`}
                 alt=""
                 width="260"
                 style={{
@@ -90,7 +90,7 @@ function App() {
                 }}
               ></img>
               <img
-                src={"/images/clothes/layer_2/1.png"}
+                src={`/images/clothes/layer_2/${itemObject._coat}.png`}
                 alt=""
                 width="260"
                 style={{
@@ -101,7 +101,7 @@ function App() {
                 }}
               ></img>
               <img
-                src={"/images/clothes/layer_3/8.png"}
+                src={`/images/clothes/layer_3/${itemObject._accessories}.png`}
                 alt=""
                 width="260"
                 style={{
@@ -112,7 +112,7 @@ function App() {
                 }}
               ></img>
               <img
-                src={"/images/mouths/10.png"}
+                src={`/images/mouths/${itemObject._mouth}.png`}
                 alt=""
                 width="260"
                 style={{
@@ -123,7 +123,7 @@ function App() {
                 }}
               ></img>
               <img
-                src={"/images/noses/1.png"}
+                src={`/images/noses/1.png`}
                 alt=""
                 width="260"
                 style={{
@@ -134,7 +134,7 @@ function App() {
                 }}
               ></img>
               <img
-                src={"/images/eyebrows/7.png"}
+                src={`/images/eyebrows/${itemObject._eyebrows}.png`}
                 alt=""
                 width="260"
                 style={{
@@ -145,7 +145,7 @@ function App() {
                 }}
               ></img>
               <img
-                src={"/images/accessories/glasses/6.png"}
+                src={`/images/accessories/glasses/${itemObject._glasses}.png`}
                 alt=""
                 width="260"
                 style={{
@@ -156,7 +156,7 @@ function App() {
                 }}
               ></img>
               <img
-                src={"/images//hair/9.png"}
+                src={`/images//hair/${itemObject._hair}.png`}
                 alt=""
                 width="260"
                 style={{
