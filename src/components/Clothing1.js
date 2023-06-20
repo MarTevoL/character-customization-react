@@ -1,20 +1,28 @@
 import React from "react";
+import { renderbuttonItem } from "../utils/utils";
 
 function Clothing1({ setClothing1, total }) {
-  const imageFolderUrl = "images/clothes/layer_1";
+  const itemArray = renderbuttonItem(total);
+  const imageFolderUrl = "images/clothes/layer_1/";
   return (
     <div className="list-section">
       <h2>Clothing layer 1</h2>
       <div className="list">
-        <div className="clickable square">
-          <img
-            src={`${imageFolderUrl}1.png`}
-            alt=""
-            height="60"
-            className="img-center"
-            style={{ top: "50%" }}
-          ></img>
-        </div>
+        {itemArray.map((item) => (
+          <div
+            key={item}
+            className="clickable square"
+            onClick={() => setClothing1(item)}
+          >
+            <img
+              src={`${imageFolderUrl}${item}.png`}
+              alt=""
+              height="60"
+              className="img-center"
+              style={{ top: "50%" }}
+            ></img>
+          </div>
+        ))}
       </div>
     </div>
   );

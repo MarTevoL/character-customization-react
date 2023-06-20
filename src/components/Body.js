@@ -1,23 +1,21 @@
 import React from "react";
+import { renderbuttonItem } from "../utils/utils";
 
 function Body({ setBody, total }) {
   const imageFolderUrl = "images/body/";
-  const arrayItems = [];
 
-  const renderbuttonItem = () => {
-    for (let index = 0; index < total; index++) {
-      arrayItems.push(`${index + 1}`);
-      console.log(arrayItems);
-    }
-  };
-  renderbuttonItem();
+  const itemArray = renderbuttonItem(total);
 
   return (
     <div className="list-section">
       <h2>Body</h2>
       <div className="list">
-        {arrayItems.map((item) => (
-          <div className="clickable square" onClick={() => setBody(item)}>
+        {itemArray.map((item) => (
+          <div
+            key={item}
+            className="clickable square"
+            onClick={() => setBody(item)}
+          >
             <img
               src={`${imageFolderUrl}${item}.png`}
               alt=""
