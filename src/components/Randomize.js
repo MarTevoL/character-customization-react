@@ -14,6 +14,8 @@ function Randomize({ totalObject, setItemObject }) {
       _clothing2: randomNumber(1, totalObject.clothing2),
       _clothing3: randomNumber(1, totalObject.clothing3),
       _hat: randomNumber(1, totalObject.hat),
+      _neckwear: randomNumber(1, totalObject.neckwear),
+      _earrings: randomNumber(1, totalObject.earrings),
     };
     setItemObject(randomChar);
   };

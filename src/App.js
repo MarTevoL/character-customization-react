@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import "./components/Body";
 import Body from "./components/Body";
@@ -13,18 +13,10 @@ import Clothing3 from "./components/Clothing3";
 import Hat from "./components/Hat";
 import Avatar from "./components/Avatar";
 import Header from "./components/Header";
+import Neckwear from "./components/Neckwear";
+import Earrings from "./components/Earrings";
 
 function App() {
-  const [body, setBody] = useState(1);
-  const [eyes, setEyes] = useState(2);
-  const [hair, setHair] = useState(3);
-  const [mouth, setMouth] = useState(4);
-  const [eyebrows, setEyebrows] = useState(5);
-  const [glasses, setGlasses] = useState(6);
-  const [clothing1, setClothing1] = useState(1);
-  const [clothing2, setClothing2] = useState(1);
-  const [clothing3, setClothing3] = useState(1);
-  const [hat, setHat] = useState(1);
   const [itemObject, setItemObject] = useState({
     _body: 1,
     _eyes: 1,
@@ -36,6 +28,8 @@ function App() {
     _clothing2: 1,
     _clothing3: 1,
     _hat: 1,
+    _neckwear: 1,
+    _earrings: 1,
   });
 
   const total = {
@@ -49,76 +43,62 @@ function App() {
     clothing1: 5,
     clothing2: 5,
     clothing3: 9,
+    neckwear: 18,
+    earrings: 32,
   };
 
-  useEffect(() => {
-    setItemObject({
-      _body: body,
-      _eyes: eyes,
-      _hair: hair,
-      _mouth: mouth,
-      _eyebrows: eyebrows,
-      _glasses: glasses,
-      _clothing1: clothing1,
-      _clothing2: clothing2,
-      _clothing3: clothing3,
-      _hat: hat,
-    });
-  }, [
-    body,
-    eyes,
-    hair,
-    mouth,
-    eyebrows,
-    glasses,
-    clothing1,
-    clothing2,
-    clothing3,
-    hat,
-  ]);
-
   const handleSetBody = (value) => {
-    setBody(value);
+    setItemObject({ ...itemObject, _body: value });
   };
 
   const handleSetEyes = (value) => {
-    setEyes(value);
+    setItemObject({ ...itemObject, _eyes: value });
   };
 
   const handleSetEyeBrows = (value) => {
-    setEyebrows(value);
+    setItemObject({ ...itemObject, _eyebrows: value });
   };
 
   const handleSetHair = (value) => {
-    setHair(value);
+    setItemObject({ ...itemObject, _hair: value });
   };
 
   const handleSetMouth = (value) => {
-    setMouth(value);
+    setItemObject({ ...itemObject, _mouth: value });
   };
 
   const handleSetGlasses = (value) => {
-    setGlasses(value);
+    setItemObject({ ...itemObject, _glasses: value });
   };
 
   const handleSetClothing1 = (value) => {
-    setClothing1(value);
+    setItemObject({ ...itemObject, _clothing1: value });
   };
 
   const handleSetClothing2 = (value) => {
-    setClothing2(value);
+    setItemObject({ ...itemObject, _clothing2: value });
   };
 
   const handleSetClothing3 = (value) => {
-    setClothing3(value);
+    setItemObject({ ...itemObject, _clothing3: value });
   };
 
   const handleSetHat = (value) => {
-    setHat(value);
+    setItemObject({ ...itemObject, _hat: value });
+  };
+
+  const handleSetNeckwear = (value) => {
+    setItemObject({ ...itemObject, _neckwear: value });
+  };
+
+  const handleSetEarrings = (value) => {
+    setItemObject({ ...itemObject, _earrings: value });
   };
 
   const handleRandomItem = (value) => {
-    setItemObject(value);
+    setItemObject({
+      ...value,
+    });
   };
 
   return (
@@ -139,6 +119,8 @@ function App() {
           <Mouth setMouth={handleSetMouth} total={total.mouth} />
           <Eyebrows setEyebrows={handleSetEyeBrows} total={total.eyebrows} />
           <Glasses setGlasses={handleSetGlasses} total={total.glasses} />
+          <Neckwear setNeckwear={handleSetNeckwear} total={total.neckwear} />
+          <Earrings setEarrings={handleSetEarrings} total={total.earrings} />
           <Clothing1
             setClothing1={handleSetClothing1}
             total={total.clothing1}

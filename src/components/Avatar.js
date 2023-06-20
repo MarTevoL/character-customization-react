@@ -105,11 +105,33 @@ function Avatar({ itemObject, totalObject, setItemObject }) {
           }}
         ></img>
         <img
+          src={`/images/accessories/earrings/${itemObject._earrings}.png`}
+          alt=""
+          width="260"
+          style={{
+            zIndex: "9",
+            position: "absolute",
+            left: "0px",
+            top: "0px",
+          }}
+        ></img>
+        <img
+          src={`/images/accessories/neckwear/${itemObject._neckwear}.png`}
+          alt=""
+          width="260"
+          style={{
+            zIndex: "8",
+            position: "absolute",
+            left: "0px",
+            top: "0px",
+          }}
+        ></img>
+        <img
           src={`/images/hair/${itemObject._hair}.png`}
           alt=""
           width="260"
           style={{
-            zIndex: "7",
+            zIndex: "8",
             position: "absolute",
             left: "0px",
             top: "0px",
@@ -121,7 +143,7 @@ function Avatar({ itemObject, totalObject, setItemObject }) {
           alt=""
           width="260"
           style={{
-            zIndex: "8",
+            zIndex: "9",
             position: "absolute",
             left: "0px",
             top: "0px",
