@@ -1,13 +1,14 @@
 import React from "react";
 
-function Clothing2() {
+function Clothing2({ setClothing2, total }) {
+  const imageFolderUrl = "images/clothes/layer_2/";
   return (
     <div className="list-section">
       <h2>Clothing layer 2</h2>
       <div className="list">
         <div className="clickable square">
           <img
-            src={"images/clothes/layer_2/1.png"}
+            src={`${imageFolderUrl}2.png`}
             alt=""
             height="60"
             className="img-center"

@@ -1,13 +1,14 @@
 import React from "react";
 
-function Hair() {
+function Hair({ setHair, total }) {
+  const imageFolderUrl = "images/hair/";
   return (
     <div className="list-section">
       <h2>Hair</h2>
       <div className="list">
         <div className="clickable square">
           <img
-            src={"images/hair/1.png"}
+            src={`${imageFolderUrl}1.png`}
             alt=""
             height="60"
             className="img-center"

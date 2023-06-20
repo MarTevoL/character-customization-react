@@ -1,13 +1,14 @@
 import React from "react";
 
-function Hat() {
+function Hat({ setHat, total }) {
+  const imageFolderUrl = "images/accessories/hats/";
   return (
     <div className="list-section">
       <h2>Hat</h2>
       <div className="list">
         <div className="clickable square">
           <img
-            src={"images/accessories/hats/1.png"}
+            src={`${imageFolderUrl}9.png`}
             alt=""
             height="60"
             className="img-center"

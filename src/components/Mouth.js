@@ -1,13 +1,14 @@
 import React from "react";
 
-function Mouth() {
+function Mouth({ setMouth, total }) {
+  const imageFolderUrl = "images/mouths/";
   return (
     <div className="list-section">
       <h2>Mouth</h2>
       <div className="list">
         <div className="clickable square">
           <img
-            src={"images/mouths/1.png"}
+            src={`${imageFolderUrl}a.png`}
             alt=""
             height="120"
             className="img-center"
