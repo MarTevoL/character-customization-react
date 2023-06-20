@@ -3,7 +3,7 @@ import React from "react";
 function Clothing3() {
   return (
     <div className="list-section">
-      <h2>Accessories</h2>
+      <h2>Clothing layer 3</h2>
       <div className="list">
         <div className="clickable square">
           <img

@@ -1,13 +1,13 @@
 import React from "react";
 
-function Clothing2() {
+function Hat() {
   return (
     <div className="list-section">
-      <h2>Clothing layer 2</h2>
+      <h2>Hat</h2>
       <div className="list">
         <div className="clickable square">
           <img
-            src={"images/clothes/layer_2/1.png"}
+            src={"images/accessories/hats/1.png"}
             alt=""
             height="60"
             className="img-center"
@@ -19,4 +19,4 @@ function Clothing2() {
   );
 }
 
-export default Clothing2;
+export default Hat;

@@ -10,6 +10,8 @@ import Glasses from "./components/Glasses";
 import Clothing1 from "./components/Clothing1";
 import Clothing2 from "./components/Clothing2";
 import Clothing3 from "./components/Clothing3";
+import Hat from "./components/Hat";
+import Avatar from "./components/Avatar";
 
 function App() {
   const [body, setBody] = useState(1);
@@ -18,20 +20,35 @@ function App() {
   const [mouth, setMouth] = useState(4);
   const [eyebrows, setEyebrows] = useState(5);
   const [glasses, setGlasses] = useState(6);
-  const [shirt, setShirt] = useState(1);
-  const [coat, setCoat] = useState(1);
-  const [accessories, setAccessories] = useState(1);
+  const [clothing1, setClothing1] = useState(1);
+  const [clothing2, setClothing2] = useState(1);
+  const [clothing3, setClothing3] = useState(1);
+  const [hat, setHat] = useState(1);
   const [itemObject, setItemObject] = useState({
-    _body: body,
-    _eyes: eyes,
-    _hair: hair,
-    _mouth: mouth,
-    _eyebrows: eyebrows,
-    _glasses: glasses,
-    _shirt: shirt,
-    _coat: coat,
-    _accessories: accessories,
+    _body: 1,
+    _eyes: 1,
+    _hair: 1,
+    _mouth: 1,
+    _eyebrows: 1,
+    _glasses: 1,
+    _clothing1: 1,
+    _clothing2: 1,
+    _clothing3: 1,
+    _hat: 1,
   });
+
+  const total = {
+    body: 17,
+    eyes: 17,
+    hair: 73,
+    mouth: 24,
+    eyebrows: 15,
+    hat: 28,
+    glasses: 17,
+    clothing1: 5,
+    clothing2: 5,
+    clothing3: 9,
+  };
 
   useEffect(() => {
     setItemObject({
@@ -41,11 +58,23 @@ function App() {
       _mouth: mouth,
       _eyebrows: eyebrows,
       _glasses: glasses,
-      _shirt: shirt,
-      _coat: coat,
-      _accessories: accessories,
+      _clothing1: clothing1,
+      _clothing2: clothing2,
+      _clothing3: clothing3,
+      _hat: hat,
     });
-  }, [body, eyes, hair, mouth, eyebrows, glasses, shirt, coat, accessories]);
+  }, [
+    body,
+    eyes,
+    hair,
+    mouth,
+    eyebrows,
+    glasses,
+    clothing1,
+    clothing2,
+    clothing3,
+    hat,
+  ]);
 
   return (
     <div className="App">
@@ -54,123 +83,7 @@ function App() {
       <div className="divider"></div>
       <div className="avatar-group gap-30">
         <div>
-          <div className="avatar-wrapper">
-            <div className="avatar">
-              <img
-                src={`images/body/${itemObject._body}.png`}
-                alt=""
-                width="260"
-                style={{
-                  zIndex: 0,
-                  position: "absolute",
-                  left: "0px",
-                  top: "0px",
-                }}
-              ></img>
-              <img
-                src={`/images/eyes/${itemObject._eyes}.png`}
-                alt=""
-                width="260"
-                style={{
-                  zIndex: 1,
-                  position: "absolute",
-                  left: "0px",
-                  top: "0px",
-                }}
-              ></img>
-              <img
-                src={`/images/clothes/layer_1/${itemObject._shirt}.png`}
-                alt=""
-                width="260"
-                style={{
-                  zIndex: 2,
-                  position: "absolute",
-                  left: "0px",
-                  top: "0px",
-                }}
-              ></img>
-              <img
-                src={`/images/clothes/layer_2/${itemObject._coat}.png`}
-                alt=""
-                width="260"
-                style={{
-                  zIndex: "3",
-                  position: "absolute",
-                  left: "0px",
-                  top: "0px",
-                }}
-              ></img>
-              <img
-                src={`/images/clothes/layer_3/${itemObject._accessories}.png`}
-                alt=""
-                width="260"
-                style={{
-                  zIndex: "4",
-                  position: "absolute",
-                  left: "0px",
-                  top: "0px",
-                }}
-              ></img>
-              <img
-                src={`/images/mouths/${itemObject._mouth}.png`}
-                alt=""
-                width="260"
-                style={{
-                  zIndex: "5",
-                  position: "absolute",
-                  left: "0px",
-                  top: "0px",
-                }}
-              ></img>
-              <img
-                src={`/images/noses/1.png`}
-                alt=""
-                width="260"
-                style={{
-                  zIndex: "5",
-                  position: "absolute",
-                  left: "0px",
-                  top: "0px",
-                }}
-              ></img>
-              <img
-                src={`/images/eyebrows/${itemObject._eyebrows}.png`}
-                alt=""
-                width="260"
-                style={{
-                  zIndex: "5",
-                  position: "absolute",
-                  left: "0px",
-                  top: "0px",
-                }}
-              ></img>
-              <img
-                src={`/images/accessories/glasses/${itemObject._glasses}.png`}
-                alt=""
-                width="260"
-                style={{
-                  zIndex: "6",
-                  position: "absolute",
-                  left: "0px",
-                  top: "0px",
-                }}
-              ></img>
-              <img
-                src={`/images//hair/${itemObject._hair}.png`}
-                alt=""
-                width="260"
-                style={{
-                  zIndex: "7",
-                  position: "absolute",
-                  left: "0px",
-                  top: "0px",
-                }}
-              ></img>
-            </div>
-            <div className="text-center">
-              <button className="button">Randomize!</button>
-            </div>
-          </div>
+          <Avatar itemObject={itemObject} />
         </div>
         <div>
           <Body />
@@ -182,6 +95,7 @@ function App() {
           <Clothing1 />
           <Clothing2 />
           <Clothing3 />
+          <Hat />
         </div>
       </div>
     </div>
