@@ -5,3 +5,9 @@ export const renderbuttonItem = (number) => {
   }
   return array;
 };
+
+export const randomNumber = (min, max) => {
+  let randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+  console.log(randomNumber);
+  return randomNumber;
+};

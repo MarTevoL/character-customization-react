@@ -1,6 +1,7 @@
 import React from "react";
+import Randomize from "./Randomize";
 
-function Avatar({ itemObject }) {
+function Avatar({ itemObject, totalObject, setItemObject }) {
   return (
     <div className="avatar-wrapper">
       <div className="avatar">
@@ -127,9 +128,7 @@ function Avatar({ itemObject }) {
           }}
         ></img>
       </div>
-      <div className="text-center">
-        <button className="button">Randomize!</button>
-      </div>
+      <Randomize totalObject={totalObject} setItemObject={setItemObject} />
     </div>
   );
 }

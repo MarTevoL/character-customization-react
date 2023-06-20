@@ -117,12 +117,20 @@ function App() {
     setHat(value);
   };
 
+  const handleRandomItem = (value) => {
+    setItemObject(value);
+  };
+
   return (
     <div className="App">
       <Header />
       <div className="avatar-group gap-30">
         <div>
-          <Avatar itemObject={itemObject} />
+          <Avatar
+            itemObject={itemObject}
+            totalObject={total}
+            setItemObject={handleRandomItem}
+          />
         </div>
         <div>
           <Body setBody={handleSetBody} total={total.body} />
