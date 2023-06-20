@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
       <div className="title">CHARACTER</div>
-      <div className="subtitle">🛠️CUSTOMIZATION🛠️</div>
+      <div className="subtitle">️CUSTOMIZATION️</div>
       <div className="divider"></div>
     </>
   );

@@ -3,8 +3,6 @@ import { randomNumber } from "../utils/utils";
 
 function Randomize({ totalObject, setItemObject }) {
   const setRandomChar = () => {
-    let randomBody = randomNumber(1, 9);
-
     const randomChar = {
       _body: randomNumber(1, totalObject.body),
       _eyes: randomNumber(1, totalObject.eyes),
@@ -17,7 +15,6 @@ function Randomize({ totalObject, setItemObject }) {
       _clothing3: randomNumber(1, totalObject.clothing3),
       _hat: randomNumber(1, totalObject.hat),
     };
-    console.log(randomChar);
     setItemObject(randomChar);
   };
   return (

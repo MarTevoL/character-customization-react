@@ -19,7 +19,7 @@ function Clothing1({ setClothing1, total }) {
               alt=""
               height="60"
               className="img-center"
-              style={{ top: "50%" }}
+              style={{ top: "40%" }}
             ></img>
           </div>
         ))}

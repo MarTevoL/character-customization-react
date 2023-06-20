@@ -20,7 +20,7 @@ function Hat({ setHat, total }) {
               alt=""
               height="60"
               className="img-center"
-              style={{ top: "50%" }}
+              style={{ top: "70%" }}
             ></img>
           </div>
         ))}
