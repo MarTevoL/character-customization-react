@@ -25,15 +25,6 @@ function Body({ setBody, total }) {
             ></img>
           </div>
         ))}
-        {/* <div className="clickable square">
-          <img
-            src={`${imageFolderUrl}1.png`}
-            alt=""
-            height="60"
-            className="img-center"
-            style={{ top: "50%" }}
-          ></img>
-        </div> */}
       </div>
     </div>
   );
